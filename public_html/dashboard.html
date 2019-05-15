@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <title>RealSource</title>
+    
+	<link href="assets/vendor/font-awesome/css/font-awesome.css" rel="stylesheet">
+	<link href="assets/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="assets/vendor/bootstrap/css/bootstrap-theme.css" rel="stylesheet">
+	<link href="assets/vendor/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+	<link href="assets/vendor/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+	
+    <link href="assets/vendor/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+    <link href="assets/vendor/timepicker/jquery.timepicker.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendor/animate/animate.min.css">
+    <link rel="stylesheet" href="assets/vendor/fine-uploader/fine-uploader-new.css">
+    
+
+    <link href="css/app.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+    <header>
+            <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg " id="mainNav">
+            <div class="container">    
+                <a class="navbar-brand" href=""><img id="logo" height="42" width="auto" src="assets/img/logo.jpg"></a>
+                    
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">    
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Dashboard
+                            </a>    
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                New Order
+                            </a>        
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                My Orders
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                nkosi@realsource.co.za
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">profile</a>
+                                <a class="dropdown-item" href="#">transactions</a>
+                                <div class="dropdown-divider"></div>    
+                                <a class="dropdown-item" href="#">logout</a>
+                            </div>
+                        </li>    
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container" id="ordering">
+        <section>
+            <div id="main-grid">
+                <div class="main-bar  wow slideInLeft">
+                    <h2 class="dashboard-head">Dashboard: Welcome Nkosingiphile Sibandze </h2>
+                    <ol class="breadcrumb ">
+                        <li class="breadcrumb-item active">Dashboard</li>
+                    </ol>
+                    <div id="orders-recent" class="card card-default">
+                        <div class="card-header">
+                            Recent orders
+                        </div>
+                        <div class="card-body">
+                            <table class="dordertable table table-striped display layout responsive-table responsive-table-orders" cellspacing="0" cellpadding="0">
+                                <thead>
+                                    <tr>
+                                        <td class="first theme-first">ID</td>
+                                        <td class="tabletitle theme-tabletitle">
+                                            Title
+                                        </td>
+                                        <td class="tableprice theme-tableprice">
+                                            Price
+                                        </td>
+                                        <td class="tablestatus theme-tablestatus">
+                                            Status
+                                        </td>
+                                        <td class="tableactions theme-tableactions">
+                                            Actions
+                                        </td>
+                                    </tr>    
+                                </thead>    
+                                <tbody>
+                                    <tr>
+                                        <td class="first">
+                                            685776  
+                                        </td>
+                                        <td>
+                                            C++ and Applications
+                                        </td>
+                                        <td class="tableprice">
+                                            $19.32 
+                                        </td>
+                                        <td class="tablestatus">
+                                            <span class="incomplete">Incomplete</span>
+                                        </td>
+                                        <td class="tableactions">
+                                            <a class="btn btn-sm btn-warning btn-warning" href="">
+                                                Complete Order
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a class="bigbutton greenbtn btn btn-primary theme_has-icon-folder" href="">
+                                Order History
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-grid">
+                        <div id="orders-messages" class="card card-default">
+                            <div class="card-header">
+                                New files
+                            </div>
+                            <div class="card-body">
+                                <table class="dordertable table table-striped" cellspacing="0" cellpadding="0">
+                                    <thead class="theme_hidden">
+                                        <tr>
+                                            <td class="tablemf1 ">File</td>
+                                            <td class="tablemf ">Actions</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2" class="first" valign="middle">No new messages</td>
+                                        </tr>                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div id="orders-files" class="card card-default">
+                            <div class="card-header">
+                                New messages
+                            </div>
+                            <div class="card-body">
+                                <table class="dordertable table table-striped" cellspacing="0" cellpadding="0">
+                                    <thead class="theme_hidden">
+                                        <tr>
+                                            <td class="tablemf1 ">Message</td>
+                                            <td class="tablemf ">Actions</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2" class="first" valign="middle">No new messages</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="side-bar wow slideInRight">
+                </div>
+                
+            </div>
+            
+        </section>
+        
+    </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>©  2019 - realsource.co.za. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- @yield('content') -->    
+    <!-- Bootstrap core JavaScript -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/jquery-ui/jquery-ui.js" type="text/javascript"></script>
+
+    <script src="assets/vendor/popper/popper.min.js" type="text/javascript"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <script src="assets/js/bootstrap-input-spinner.js" type="text/javascript"></script>
+    <script src="assets/vendor/timepicker/jquery.timepicker.min.js" type="text/javascript"></script>
+    <script src="assets/vendor/owlcarousel/owl.carousel.js" type="text/javascript"></script>
+    <script src="assets/vendor/wow/wow.min.js"></script>
+    <script>new WOW().init();</script>
+    <script src="assets/vendor/fine-uploader/fine-uploader.js"></script>
+    
+    <script src="assets/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="assets/vendor/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="assets/js/custom.js" type="text/javascript"></script>
+    
+    
+
+</body>
+
+</html>

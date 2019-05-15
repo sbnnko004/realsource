@@ -1,0 +1,482 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Monsterrat');
+
+
+// Variables
+
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+$font-family-sans-serif: "Nunito", sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Colors
+// global-logo-color: ##f5f5f5
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66D9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+
+/*
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+$font-family-sans-serif: "Nunito", sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+ Colors
+ */
+$logo-color:#980404;
+$charcoal: #36454f;
+$header-color: rgba(21,27,31, 0.8);
+$header-color: $logo-color;
+$hero-tint: #170303;
+$global-green: #52a401;
+//$global-green: #980404;
+$button-blue: #3165c0;
+$offer-green: $global-green;
+$offer-orange: #e19f04;
+$offer-blue: #225dca;
+$testimonials-grey: #efedef;
+$text-dark: $charcoal;
+$text-light: whitesmoke;
+$universal-grey: #efedef;
+
+
+$background-picture-xm-device: "/img/kiyun-lee-1121920-unsplash 360x180.jpg";
+$background-picture: "/img/kiyun-lee-1121920-unsplash.jpg";
+$offer-background-picture: "/img/aaron-burden-123582-unsplash.jpg";
+
+
+body{
+  background: rgba($logo-color,0.8);
+  background: white;
+}
+
+#mainNav {
+  background-color: $text-light;
+  box-shadow: 0 2px 4px rgba($text-light, 1);
+  display: block;
+	@include desktop{
+    background: $header-color;
+  }
+  .navbar-nav {
+	  #logo{
+		  width: 100%;
+		  height: auto;
+	  }
+    .nav-item {
+      border: solid $header-color;
+      a{
+        font-size: 0.75rem;
+        color: $text-dark;
+        text-transform: uppercase;
+        @include desktop{
+          color: $text-light;
+          font-size:14px;
+          text-decoration: none;
+          display: block;
+          padding: 4px 6px;
+          box-sizing: border-box;
+          font-family: 'Open Sans', arial, sans-serif;
+          outline: 0;
+          transition: box-shadow 0.1s;
+          position: relative;
+          font-weight: 300;
+          cursor: pointer;
+        }
+      }
+    } 
+    .active{
+      
+      //clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
+      border:  solid rgba($text-light,1);
+ 
+    } 
+  }
+  .social-nav{
+    a{
+      display: none;
+      padding: 0 !important;
+      img{
+        height: 36px;
+        width: auto;
+      }
+
+      @include desktop{
+        display: block;
+        padding: 0 !important;
+      }
+    }
+    
+  } 
+}
+
+main
+{
+  padding-top: 66px;
+  @include desktop{
+    padding-top: 0; 
+  }
+  .bg-overlay{
+    background:
+    {
+      color: white;
+      image: url($background-picture-xm-device);
+      position: top center;
+      repeat: no-repeat;
+      attachment: scroll;
+      size:     contain;                      /* <------ */
+    }   
+    min-height: 202px;
+    @include desktop{
+      background:
+      {
+        image: linear-gradient(rgba($hero-tint, 0.4  ),rgba($hero-tint, 0.5  )), url($background-picture);
+        size:     cover;                      /* <------ */
+      }
+      min-height: 700px;
+    }
+  }
+  #jumbotron1
+  {    
+    //box-shadow: 0 3000px rgba($hero-tint, 0.6  ) inset;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    .jumbotron-container{
+      margin-top: 176px;
+      padding-left: 0;
+      padding-right: 0; 
+      .jumbotron-content{
+        .lead{
+          text-align: center;
+          line-height: 10%;
+          display: inline-block;
+          width: 100%;
+          h2{
+            font-size: 20px;
+            color: $text-dark;
+
+            @include desktop{
+              font-size: 3.0rem;
+              color: $text-light;
+              font-weight: 500;
+            }
+          }
+          p{
+            line-height: 100%;
+            font-size: 16px;
+            color: $text-dark;
+            @include desktop{
+              font-size: 2.5rem;
+              color: $text-light;
+            }
+          }
+        } 
+        .form-space{  
+          display: none;
+
+          background: $header-color;
+          @include desktop{
+            display: block;
+            margin: 3% 15% 3% 15%;
+            padding: 10px;
+          }
+          .form-inline{
+            display:block;
+            .form-group{
+              .form-control{
+                @include desktop{
+                  width: 100%;
+                }
+              }
+            }
+            .submit-button{
+              button{
+                width: 100%;
+              } 
+            }
+          }
+        }
+      }
+    }
+    .user{
+      .user-nav{
+        width: 100%;
+        display: flex;
+        
+      }
+    }
+  }
+}
+
+section .title{
+  text-align: center;
+  font-size: 22px;
+  color: $text-dark;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 15px;
+}
+
+#services{
+  .container-wrap{
+    padding-top: 15px;
+    .container{
+      .title{
+        
+      }
+      .service-list{
+        @include desktop{
+          display: grid;
+          grid-template-columns: auto auto auto;
+          grid-auto-rows: 1fr;
+        }
+        .service-item{          
+          hr{
+            margin-left: 5%;
+            margin-right: 5%;
+          }
+          .service-body{
+            display: grid;
+            grid-template-columns: 30% 70%;
+            padding: 5px;
+            img{
+              width: 100%;
+              height: auto;
+              padding: 10px;
+              clip-path: circle(50% at 50% 50%);
+            }
+            .service-body-text{
+              margin-top: 5px;
+              h4{
+                font-weight: 600;
+                font-size: 18px;
+                
+                color: $text-dark;
+                @include desktop{
+                  font-size: 22px;
+                }
+              }
+              p{
+                @include desktop{
+                  font-size: 18px;
+                }
+              }
+              a{
+                float: right;
+                cursor: grabbing;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#offers{
+  padding-bottom: 20px;
+  .offers-container{
+    padding-bottom: 75px; 
+    background:
+    {
+      image: linear-gradient(rgba($hero-tint, 0.6  ),rgba($hero-tint, 0.6  )), url($offer-background-picture);
+      color: $text-light;
+      position: top center;
+      repeat: no-repeat;
+      size:     cover;                      /* <------ */
+    }
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0% 85%); 
+    text-align: center;
+
+    .item-container{
+      background: $text-light;
+
+
+      .item-header{
+        padding: 5px 0 5px 0;
+        color: $text-light;
+      }
+      .item-body{
+        ul{
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+        }
+        li{
+            list-style-type:none;
+          
+        }
+      }
+    }
+  }
+}
+
+#testimonial{
+  .testimonial-container{
+    #testimonial-carousel{
+      .testimonial-carousel-item{
+        .item-container{
+          text-align: center;
+          .item-header{
+            //background: $universal-grey; for bigger devices
+            background: $global-green;
+            clip-path: polygon(100% 0, 100% 95%, 54% 95%, 50% 100%, 46% 95%, 0 95%, 0 0);
+
+            p{
+              font-size: 17px;
+              text-align: center;
+              padding: 40px 15px 40px 15px;
+            }
+          }
+          .posted-by{
+            font-weight: bold; 
+          }
+          .school{
+
+          }
+        }
+        .active{
+          .item-container{
+            .item-header{
+              background: $global-green;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* Normal white Button as seen on Google.com*/
+button {
+  color: #444444;
+  background: #F3F3F3;
+  border: 1px #DADADA solid;
+  padding: 5px 10px;
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: 9pt;
+  outline: none;
+}
+
+button:hover {
+  border: 1px #C6C6C6 solid;
+  box-shadow: 1px 1px 1px #EAEAEA;
+  color: #333333;
+  background: #F7F7F7;
+}
+
+button:active {
+  box-shadow: inset 1px 1px 1px #DFDFDF;   
+}
+/* Green button as seen on translate.google.com*/
+.button.green, .btn-green{
+  color: white;
+  background: $global-green;
+  border: 1px aquamarine solid;
+  box-shadow: inset 0 1px 0 green;
+  &:active{
+    border: 1px #2F5BB7 solid;
+    box-shadow: 0 1px 1px #EAEAEA, inset 0 1px 0 #5A94F1;
+    background: #3F83F1;
+  }
+  &:hover{
+    box-shadow: inset 0 2px 5px #2370FE; 
+  }
+}
+/* Blue button as seen on translate.google.com*/
+.btn-blue, button.blue {
+  color: white;
+  background: #4C8FFB;
+  border: 1px #3079ED solid;
+  box-shadow: inset 0 1px 0 #80B0FB;
+}
+
+.btn-blue:hover,button.blue:hover {
+  border: 1px #2F5BB7 solid;
+  box-shadow: 0 1px 1px #EAEAEA, inset 0 1px 0 #5A94F1;
+  background: #3F83F1;
+}
+
+.btn-blue:active, button.blue:active {
+  box-shadow: inset 0 2px 5px #2370FE;   
+}
+
+/* Orange button as seen on blogger.com*/
+button.orange {
+  color: white;
+  border: 1px solid #FB8F3D; 
+  background: -webkit-linear-gradient(top, #FDA251, #FB8F3D);
+  background: -moz-linear-gradient(top, #FDA251, #FB8F3D);
+  background: -ms-linear-gradient(top, #FDA251, #FB8F3D);
+}
+
+button.orange:hover {
+  border: 1px solid #EB5200;
+  background: -webkit-linear-gradient(top, #FD924C, #F9760B); 
+  background: -moz-linear-gradient(top, #FD924C, #F9760B); 
+  background: -ms-linear-gradient(top, #FD924C, #F9760B); 
+  box-shadow: 0 1px #EFEFEF;
+}
+
+button.orange:active {
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.3);
+}
+
+/* Red Google Button as seen on drive.google.com */
+button.red {
+  background: -webkit-linear-gradient(top, #DD4B39, #D14836); 
+  background: -moz-linear-gradient(top, #DD4B39, #D14836); 
+  background: -ms-linear-gradient(top, #DD4B39, #D14836); 
+  border: 1px solid #DD4B39;
+  color: white;
+  text-shadow: 0 1px 0 #C04131;
+}
+
+button.red:hover {
+   background: -webkit-linear-gradient(top, #DD4B39, #C53727);
+   background: -moz-linear-gradient(top, #DD4B39, #C53727);
+   background: -ms-linear-gradient(top, #DD4B39, #C53727);
+   border: 1px solid #AF301F;
+}
+
+button.red:active {
+   box-shadow: inset 0 1px 1px rgba(0,0,0,0.2);
+  background: -webkit-linear-gradient(top, #D74736, #AD2719);
+  background: -moz-linear-gradient(top, #D74736, #AD2719);
+  background: -ms-linear-gradient(top, #D74736, #AD2719);
+}
+
+.text-green{
+  color: $global-green;
+}
+
+.text-light{
+  color: $text-light;
+}
+
+.bg-blue{
+  background: $offer-blue;
+}
+.bg-orange{
+  background: $offer-orange;
+}
+.bg-green{
+ background: $offer-green;
+}
+.bg-grey{
+  background: $universal-grey;
+}
